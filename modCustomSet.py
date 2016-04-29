@@ -18,7 +18,7 @@ class CustomSet:
                self._setList.append(el)
 
 
-    def unionSet(self, set,tmp2):
+    def __add__(self, set,tmp2):
         """
         __author__="Karma Gurung"
         __date__="4/27/16"
