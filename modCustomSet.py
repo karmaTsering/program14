@@ -45,6 +45,7 @@ class CustomSet:
     #Priyash Kafle
     def __and__(self,other):
         '''
+        Author:Priyash Kafle
         Description: Returns an intersection of two sets 
         PreCOndition: other(list)
         PostCondition: None
@@ -59,8 +60,9 @@ class CustomSet:
 
     def __sub__(self, other):
         '''
+        Author:Priyash Kafle
         Description: Returns the unique element of set 1
-         PreCondition: other(list)
+        PreCondition: other(list)
         PostCondition: None
         '''
         myList=[]
@@ -70,6 +72,7 @@ class CustomSet:
 
     def __contains__(self,other):
         '''
+        Author:Priyash Kafle
         Description: Checks if an element is in the set
         PreCOndition: other(integer)
         POstCondition: None
