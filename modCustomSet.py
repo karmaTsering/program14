@@ -81,7 +81,7 @@ class CustomSet:
         else:
             return "not there"
 
-    def subset(self,tmp1,tmp2):
+    def __le__(self,tmp1,tmp2):
         set1 = CustomSet.__init__(self,tmp1)
         set2 = CustomSet.__init__(self, tmp2)
         ct = 0
@@ -94,7 +94,7 @@ class CustomSet:
             return ("not a subset")
 
     
-    def superSet(self,tmp1,tmp2):
+    def __ge__(self,tmp1,tmp2):
         set1 = CustomSet.__init__(self,tmp1)
         set2 = CustomSet.__init__(self, tmp2)
         ct = 0
@@ -106,7 +106,7 @@ class CustomSet:
         else:
             return ("No")
 
-    def count(self, tmp1):
+    def countOf(self, tmp1):
         set1 = CustomSet.__init__(self,tmp1)
         ct = 0
         for el in tmp1:
