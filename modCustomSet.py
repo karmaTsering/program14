@@ -1,5 +1,7 @@
 """
-Description: THis program create set intersection, union, 
+Description: This program creates class called CustomSet. it allow
+set intersection, union, difference, boolean, subset, the number of element in the ser
+and sting method.
 """
 class CustomSet:
     
@@ -7,9 +9,10 @@ class CustomSet:
         """
         __author__="Karma Gurung"
         __date__="4/27/16"
-        Description: This
-        Pre-condition:
-        Post-condition:
+        Description: This function initialize the private data member setList to a
+        list with no duplicate
+        Pre-condition: tmp1 must be list
+        Post-condition: return modified list with no duplicate
         
         """
         self._setList=[]
@@ -22,9 +25,10 @@ class CustomSet:
         """
         __author__="Karma Gurung"
         __date__="4/27/16"
-        Description:
-        Pre-condition:
-        Post-condition:
+        Description: It allow union of sets, it return a new set with elements form botj
+        the first and second set 
+        Pre-condition: it must be list
+        Post-condition: modifies two set with single set without duplicates
         """
         newSet=[]
         Set=[]
@@ -111,9 +115,10 @@ class CustomSet:
         """
         __author__="Karma Gurung"
         __date__="4/27/16"
-        Description:
-        Pre-condition:
-        Post-condition:
+        Description: this function allow sets to be converted to a string with the
+        elements surrounded by  { }
+        Pre-condition: none
+        Post-condition: none
         """
         
         tmp=','.join(str(el) for el in self._setList)
