@@ -83,6 +83,12 @@ class CustomSet:
             return "not there"
 
     def subset(self,tmp1,tmp2):
+        '''
+        Author:Anisha Shrestha
+        Description: Checks if set1 is subset of set2
+        PreCOndition: other(integer)
+        POstCondition: None
+        '''
         set1 = CustomSet.__init__(self,tmp1)
         set2 = CustomSet.__init__(self, tmp2)
         ct = 0
@@ -96,6 +102,12 @@ class CustomSet:
 
     
     def superSet(self,tmp1,tmp2):
+        '''
+        Author:Anisha Shrestha
+        Description: Checks if set2 is superset of set1
+        PreCOndition: other(integer)
+        POstCondition: None
+        '''
         set1 = CustomSet.__init__(self,tmp1)
         set2 = CustomSet.__init__(self, tmp2)
         ct = 0
@@ -108,6 +120,12 @@ class CustomSet:
             return ("No")
 
     def count(self, tmp1):
+        '''
+        Author:Anisha Shrestha
+        Description: counts the number of item in the set
+        PreCOndition: other(integer)
+        POstCondition: None
+        '''
         set1 = CustomSet.__init__(self,tmp1)
         ct = 0
         for el in tmp1:
