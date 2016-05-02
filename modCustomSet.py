@@ -5,7 +5,7 @@ and sting method.
 """
 class CustomSet:
     
-    def __init__(self, tmp1):
+    def __init__(self, tmpSet):
         """
         __author__="Karma Gurung"
         __date__="4/27/16"
@@ -15,13 +15,15 @@ class CustomSet:
         Post-condition: return modified list with no duplicate
         
         """
-        self._setList=[]
-        for el in tmp1:
-            if el not in self._setList:
-               self._setList.append(el)
+        myList=[]
+        for el in tmpSet:
+            if el not in myList:
+               myList.append(el)
+
+        self._setList=myList
 
 
-    def __add__(self, set,tmp2):
+    def __add__(self, other):
         """
         __author__="Karma Gurung"
         __date__="4/27/16"
@@ -34,7 +36,7 @@ class CustomSet:
         Set=[]
         for i in self._setList:
             newSet.append(i)
-        for i in other._SetList:
+        for i in other._setList:
             newSet.append(i)
 
         for el in newSet:
@@ -45,7 +47,6 @@ class CustomSet:
     #Priyash Kafle
     def __and__(self,other):
         '''
-        Author:Priyash Kafle
         Description: Returns an intersection of two sets 
         PreCOndition: other(list)
         PostCondition: None
@@ -60,9 +61,8 @@ class CustomSet:
 
     def __sub__(self, other):
         '''
-        Author:Priyash Kafle
         Description: Returns the unique element of set 1
-        PreCondition: other(list)
+         PreCondition: other(list)
         PostCondition: None
         '''
         myList=[]
@@ -72,7 +72,6 @@ class CustomSet:
 
     def __contains__(self,other):
         '''
-        Author:Priyash Kafle
         Description: Checks if an element is in the set
         PreCOndition: other(integer)
         POstCondition: None
@@ -83,12 +82,6 @@ class CustomSet:
             return "not there"
 
     def subset(self,tmp1,tmp2):
-        '''
-        Author:Anisha Shrestha
-        Description: Checks if set1 is subset of set2
-        PreCOndition: other(integer)
-        POstCondition: None
-        '''
         set1 = CustomSet.__init__(self,tmp1)
         set2 = CustomSet.__init__(self, tmp2)
         ct = 0
@@ -102,12 +95,6 @@ class CustomSet:
 
     
     def superSet(self,tmp1,tmp2):
-        '''
-        Author:Anisha Shrestha
-        Description: Checks if set2 is superset of set1
-        PreCOndition: other(integer)
-        POstCondition: None
-        '''
         set1 = CustomSet.__init__(self,tmp1)
         set2 = CustomSet.__init__(self, tmp2)
         ct = 0
@@ -120,12 +107,6 @@ class CustomSet:
             return ("No")
 
     def count(self, tmp1):
-        '''
-        Author:Anisha Shrestha
-        Description: counts the number of item in the set
-        PreCOndition: other(integer)
-        POstCondition: None
-        '''
         set1 = CustomSet.__init__(self,tmp1)
         ct = 0
         for el in tmp1:
